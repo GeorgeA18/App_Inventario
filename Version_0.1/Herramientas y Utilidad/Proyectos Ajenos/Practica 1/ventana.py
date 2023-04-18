@@ -46,10 +46,10 @@ class Ventana(tk.Frame):
         self.btnNuevo = tk.Button(frame1,text="Nuevo", command=self.fNuevo, bg="blue",fg="white")
         self.btnNuevo.place(x=5,y=50,width=80,height=30)
 
-        self.btnNuevo = tk.Button(frame1,text="Nuevo", command=self.fModificar, bg="blue",fg="white")
+        self.btnNuevo = tk.Button(frame1,text="Modificar", command=self.fModificar, bg="blue",fg="white")
         self.btnNuevo.place(x=5,y=90,width=80,height=30)
 
-        self.btnNuevo = tk.Button(frame1,text="Nuevo", command=self.fEliminar, bg="blue",fg="white")
+        self.btnNuevo = tk.Button(frame1,text="Eliminar", command=self.fEliminar, bg="blue",fg="white")
         self.btnNuevo.place(x=5,y=130,width=80,height=30)
 
 
@@ -101,6 +101,10 @@ class Ventana(tk.Frame):
 
         self.grid.heading("#0",text="Id",anchor=tk.CENTER)
         self.grid.heading("col1",text="ISO3",anchor=tk.CENTER)
-        self.grid.heading("col2",text="ISO3",anchor=tk.CENTER)
-        self.grid.heading("col3",text="ISO3",anchor=tk.CENTER)
-        self.grid.heading("col4",text="ISO3",anchor=tk.CENTER)
+        self.grid.heading("col2",text="Country Name",anchor=tk.CENTER)
+        self.grid.heading("col3",text="Capital",anchor=tk.CENTER)
+        self.grid.heading("col4",text="Currency Code",anchor=tk.CENTER)
+
+        self.grid.place(x=247,y=0,width=420,height=259)
+
+        self.grid.insert("",tk.END,text="1", values=("ARG", "Argentina", "Buenos Aires", "ARS"))
